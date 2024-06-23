@@ -1,0 +1,75 @@
+<sdf version='1.6'>
+  <model name="room">
+    <static>true</static>
+
+    <link name="room_link">
+      <pose>0 0 0 0 0 0</pose>
+
+      <visual name="room_visual">
+        <geometry>
+          <mesh>
+            <!-- <uri>model://models/room_1/meshes/test_room_1.stl</uri> -->
+            <uri>model://models/room_1/collisions/test_room1_internal_room.stl</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+        <material>
+            <ambient>0.8 0.8 0.8 1</ambient>
+            <diffuse>0.8 0.8 0.8 1</diffuse>
+            <specular>0.8 0.8 0.8 1</specular>
+            <specular>0.8 0.8 0.8 1</specular>
+        </material>
+      </visual>
+
+      <!-- <collision name="room_colission">
+        <geometry>
+          <mesh>
+            <uri>model://models/room_1/meshes/test_room_1.stl</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </collision> -->
+      <collision name="room_colission">
+        <geometry>
+          <mesh>
+            <uri>model://models/room_1/collisions/test_room1_internal_room.stl</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- <collision name="collumn_colission_1">
+        <geometry>
+          <mesh>
+            <uri>model://models/room_1/collisions/test_room_1Column_001.stl</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name="collumn_colission_2">
+        <geometry>
+          <mesh>
+            <uri>model://models/room_1/collisions/test_room_1Column_002.stl</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name="collumn_colission_3">
+        <geometry>
+          <mesh>
+            <uri>model://models/room_1/collisions/test_room_1Column_003.stl</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name="collumn_colission_4">
+        <geometry>
+          <mesh>
+            <uri>model://models/room_1/collisions/test_room_1Column_004.stl</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </collision> -->
+
+    </link>
+  </model>
+</sdf>

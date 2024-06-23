@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:macro name="uwb_tag_model" params="parent_link xyz rpy">
+
+    <material name="white">
+      <color rgba="0.8 0.8 1 1"/>
+    </material>
+
+
+    <joint name="${parent_link.rstrip('_link')}_to_uwb_tag_joint" type="fixed">
+      <origin xyz="${xyz}" rpy="${rpy}" />
+      <parent link="${parent_link}" />
+      <child link="tag_link_0" />
+    </joint>
+
+    <link name="tag_link_0">
+        <collision name="tag_link_0">
+            <origin xyz="0 0 0.025" />
+            <geometry>
+              <box size="0.1 0.1 0.05"></box>
+            </geometry>
+        </collision>
+        <visual name="tag_link_0">
+            <geometry>
+                <!-- <box size="0.2 0.2 0.1" /> -->
+                <!-- <mesh filename="package://models//uwb_tag/meshes/tag_uwb.stl"/> -->
+                <mesh filename="file://$(find plugin_test)/world/models/uwb_tag/meshes/tag_uwb.stl"/>
+                
+            </geometry>
+            <material name="white"/>
+        </visual>
+    </link>
+
+    <gazebo>
+        <plugin name="UwbPlugin" filename="uwb_plugin">
+          <update_rate>0.5</update_rate>
+          <beacon_prefix>uwb_beacon_</beacon_prefix>
+          <tag_link>tag_link_0</tag_link>
+          <tag_id>0</tag_id>
+          <!-- Used to set a different origin for UWB sensor than the Gazbeo world origin -->
+          <Set_dataum>true</Set_dataum>
+          <!-- Set the UWB's Datum origin WRT to the Gazebo world origin, (x, y, z, roll(x), pitch(y), yaw(z)), rotaion are euler sequence -->
+          <!-- <dataum_pose>10.0 10.0 0.0 0.0 0.0 0.0</dataum_pose> -->
+          <dataum_pose>10.0 10.0 0.0 0.0 0.0 1.571</dataum_pose>
+
+          <!-- frame ID to be used for the pose msg -->
+          <!-- <frame_id>tag_link_0</frame_id> -->
+          <frame_id>tag_link_0</frame_id>
+
+        </plugin>
+    </gazebo>
+
+  </xacro:macro>
+</robot>
