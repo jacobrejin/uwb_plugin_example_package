@@ -1,3 +1,15 @@
 {
-    "ros.distro": "humble"
+    "ros.distro": "humble",
+    "python.autoComplete.extraPaths": [
+        "/home/rejin/Desktop/irp/ws/uwb_plugin_test_ws/install/plugin_test/lib/python3.10/site-packages",
+        "/home/rejin/Desktop/irp/ws/husarion_ws/install/panther_msgs/local/lib/python3.10/dist-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/rejin/Desktop/irp/ws/uwb_plugin_test_ws/install/plugin_test/lib/python3.10/site-packages",
+        "/home/rejin/Desktop/irp/ws/husarion_ws/install/panther_msgs/local/lib/python3.10/dist-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ]
 }
