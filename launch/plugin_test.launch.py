@@ -242,7 +242,7 @@ def generate_launch_description():
     return LaunchDescription(
         [
             AppendEnvironmentVariable(name='GZ_SIM_RESOURCE_PATH', value = PathJoinSubstitution([FindPackageShare("plugin_test"),"world"])),
-            SetEnvironmentVariable(name='GZ_SIM_SYSTEM_PLUGIN_PATH', value = PathJoinSubstitution([FindPackageShare("plugin_test"),"plugin"])),
+            SetEnvironmentVariable(name='GZ_SIM_SYSTEM_PLUGIN_PATH', value = "/home/rejin/Desktop/irp/plugin_test/dev_env/uwb_plugin/build"),
 
             declare_world_arg,
             declare_pose_x_arg,
