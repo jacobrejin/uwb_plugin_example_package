@@ -8,8 +8,8 @@
       <visual name="room_visual">
         <geometry>
           <mesh>
-            <!-- <uri>model://models/room_1/meshes/test_room_1.stl</uri> -->
-            <uri>model://models/room_1/collisions/test_room1_internal_room.stl</uri>
+            <uri>model://models/room_1/meshes/test_room_1.stl</uri>
+            <!-- <uri>model://models/room_1/collisions/test_room1_internal_room.stl</uri> -->
             <scale>1 1 1</scale>
           </mesh>
         </geometry>
@@ -21,14 +21,16 @@
         </material>
       </visual>
 
-      <!-- <collision name="room_colission">
+      <collision name="room_colission">
         <geometry>
           <mesh>
             <uri>model://models/room_1/meshes/test_room_1.stl</uri>
             <scale>1 1 1</scale>
           </mesh>
         </geometry>
-      </collision> -->
+      </collision>
+
+<!-- 
       <collision name="room_colission">
         <geometry>
           <mesh>
@@ -36,7 +38,9 @@
             <scale>1 1 1</scale>
           </mesh>
         </geometry>
-      </collision>
+      </collision> -->
+
+
       <!-- <collision name="collumn_colission_1">
         <geometry>
           <mesh>
