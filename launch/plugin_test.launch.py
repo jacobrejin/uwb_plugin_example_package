@@ -243,7 +243,8 @@ def generate_launch_description():
     return LaunchDescription(
         [
             AppendEnvironmentVariable(name='GZ_SIM_RESOURCE_PATH', value = PathJoinSubstitution([FindPackageShare("plugin_test"),"world"])),
-            AppendEnvironmentVariable(name='GZ_SIM_SYSTEM_PLUGIN_PATH', value = "/home/rejin/Desktop/irp/plugin_test/dev_env/uwb_plugin/build"),
+            AppendEnvironmentVariable(name='GZ_SIM_SYSTEM_PLUGIN_PATH', value = PathJoinSubstitution([FindPackageShare("plugin_test"),"plugin"])),
+            # AppendEnvironmentVariable(name='GZ_SIM_SYSTEM_PLUGIN_PATH', value = "/home/rejin/Desktop/irp/plugin_test/dev_env/uwb_plugin/build"),
             AppendEnvironmentVariable(name='IGN_GAZEBO_RENDER_ENGINE_PATH', value = "/usr/local/lib"),
 
 
